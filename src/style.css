@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2? family= Nunito+Sans & family= Poppins & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+:root {
+    --primary: #F03A9E;
+    --secondary: #4AF0C8;
+    --tertiary: #4AF0C8;
+    --fundo: #D0FFCF;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    margin: auto;
+    padding-left: 15px !important;
+}
+
+p {
+    margin: auto;
+    padding-right: 15px !important;
+}
+
+a {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo);
+    transition: 1s;
+    width: 100%;
+}
+
+main {
+  padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    overflow: hidden;
+    background-color: var(--primary);
+    padding: 20px 10px;
+    max-height: 25px;
+    position: relative;
+}
+
+.header a {
+    display: inline;
+    flex-direction: row;
+    background-color: none;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 0px 12px 0px 12px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.header a:hover {
+    background-color: var(--secondary);
+    color: black;
+}
+
+.header-right {
+    float: right;
+    margin-right: 45px;
+}
+
+.header img {
+    top: 0;
+    position: absolute;
+    bottom: 15px;
+    height: 58px;
+    left: 40px;
+}
+
+/* cards */
+.card-produto {
+    left: 50%;
+    transform: translate(0%, 0%);
+    width: 240px;
+    height: 340px;
+    background: #fff;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.card-produto .img-box {
+    height: 300px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.card-produto .img-box img {
+    display: block;
+    width: 100%;
+    margin: 0 auto 0;
+    transition: 1s;
+}
+
+.details {
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    padding-top: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 1s;
+}
+
+.details h2 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 25px;
+    width: 100%;
+    font-size: 25px;
+    color: var(--primary);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.details h2 span {
+    font-size: 12px;
+    color: #bbb;
+    font-weight: normal;
+}
+
+.details .price {
+    font-size: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: black;
+}
+
+.details a {
+    display: block;
+    padding: 5px;
+    color: black;
+    margin: 15px 0 0;
+    background: var(--secondary);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.details a:hover {
+    background: var(--primary);
+    color: white;
+    transition: 1s;
+}
+
+.card-produto:hover .details {
+    overflow: visible;
+    bottom: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    transition: 1s;
+}
+
+.card-produto:hover .img-box {
+    position: absolute;
+    bottom: 50px;
+    transition: 6s;
+}
+
+.card-produto:hover h2,
+.card-produto:hover .price {
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+.btn-warning {
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+}
+
+.btn-warning:hover {
+    border: 1px solid var(--tertiary);
+    color: white;
+    background-color: transparent;
+}
+
+/* fim dos cards */
+
+.img-home {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.img-home img {
+    border-radius: 20px;
+    margin: 25px;
+    width: 80%;
+}
+
+.vendidos h1 {
+    text-align: center;
+    font-size: 38px;
+    color: var(--primary);
+    text-shadow: white 2px 1px;
+}
+
+.titulo h1 {
+    font-size: 100px;
+    color: var(--tertiary);
+
+}
+
+/* footer*/
+
+.rodape {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    left: 10px;
+    padding: 10px;
+    background-color: var(--primary);
+    bottom: 0;
+}
+
+.rodape .left {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.icons {
+    margin: 18px 0 8px 14px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.paixao {
+    justify-content: center;
+    background-color: var(--tertiary);
+    width: 70%;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.paixao h2 {
+    color: var(--primary);
+    font-size: 32px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.paixao p {
+    font-size: 18px;
+}
+
+.card-sobre {
+    max-width: 960px;
+    border-radius: 32px;
+    box-shadow: 24px 24px 80px rgba(0,0,0,0.1);
+    padding: 20px 20px 28px 20px; 
+    box-sizing: border-box;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary);
+}
+
+.card-sobre p {    
+    font-size: 18px;
+    margin-top: 5px;
+    font-family:'Nunito Sans', sans-serif; 
+}
+
+.card-sobre-img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 32px;
+    object-fit: cover;
+    margin-bottom: 18px;
+}
+
+.card-sobre-content {
+    width: 60%;
+    padding-left: 40px;
+}
+
+.card-sobre-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    line-height: 1.4;
+    color: black;
+    padding: 0 4px;
+    margin-left: -4px;
+    text-align: center;
+}
+
+.card-sobre-title span {
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary);
+}
+
+.titulo-cardapio {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.titulo-cardapio h1 {
+    font-size: 40px;
+    color: var(--primary);
+    text-shadow: white 2px 1px;
+}
+
+.titulo-cardapio h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #383838;
+}
