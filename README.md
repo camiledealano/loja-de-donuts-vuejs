@@ -1,8 +1,23 @@
-# Vue 3 + Vite
+ # 🍩Mimile Donuts
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+ 🚀A Mimile Donuts é um projeto de website e-commerce de donuts feita a partir da disciplina web 1, proveniente do curso de ciência da computação.
 
-## Recommended IDE Setup
+O projeto é feito a partir da ferramenta de construção web Vite, o framework front-end VueJs, e estilizado com a biblioteca Vuetify.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-# loja-de-donuts-vuetify
+> :construction: Projeto em construção :construction:
+
+---
+
+### 🔧 Instalação
+
+Instale as dependências via npm
+```bash
+npm install
+```
+Inicie a aplicação no navegador
+``` 
+npm run dev
+```
+---
+
+Feito com ❤️ por [Camile](https://github.com/camiledealano)
