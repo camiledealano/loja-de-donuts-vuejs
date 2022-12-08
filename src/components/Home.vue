@@ -2,10 +2,13 @@
 </script>
 
 <script>
-  import imgHome from '/src/assets/imagens/img-home.jpg';
   import imgTwix from '/src/assets/imagens/twix.jpg';
   import imgCharge from '/src/assets/imagens/charge.jpg';
   import imgOreo from '/src/assets/imagens/oreo.jpg';
+  import imgCarousel1 from '/src/assets/imagens/img-carousel-1.jpg'
+  import imgCarousel2 from '/src/assets/imagens/img-carousel-2.jpg'
+  import imgCarousel3 from '/src/assets/imagens/img-carousel-3.jpg'
+  import imgCarousel4 from '/src/assets/imagens/img-carousel-4.jpg';
   import CardProduto from './CardProduto.vue';
   
   export default {
@@ -20,18 +23,19 @@
         imgOreo,
         items: [
           {
-            src: imgHome,
+            src: imgCarousel1,
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            src: imgCarousel3,
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            src: imgCarousel2,
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            src: imgCarousel4,
           },
         ],
+        show: false,
       }
     },
   }
@@ -40,15 +44,15 @@
 <template>
     <div class="carousel-wrapper">
       <v-card class="card-carousel">
-          <v-carousel cycle interval="3000" :show-arrows="false">
+          <v-carousel cycle interval="4000" :show-arrows="true">
               <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src" />
           </v-carousel>
       </v-card>
     </div>
     
-    <article class="vendidos">
+    <div class="vendidos">
         <h1>Você tem que experimentar!</h1>
-    </article>
+    </div>
 
     <article class="row" style="margin-top: 40px; margin-bottom: 70px;">
       <CardProduto :productImage="imgTwix" productName="Twix" :productPrice="8.00" />
@@ -56,31 +60,86 @@
       <CardProduto :productImage="imgOreo" productName="Oreo" :productPrice="8.00" />
     </article>
 
-    <article class="row paixao">
-        <h2>
-            Paixão por Donuts
-        </h2>
-        <div style="padding:20px"></div>
-        <p>
-            Nossa especialidade é criar e produzir donuts, visando a felicidade e a satisfação dos clientes e
-            funcionários através de um produto de extrema qualidade, com um sabor incrível e inesquecível. <br>
-            <br>
-            Buscamos ser a opção número um para quem quer saciar o desejo de pura alegria e satisfação de sabores.
-            Pretendemos nos tornar a maior e mais gostosa empresa de donuts do mundo.</p>
-    </article>
+    <div class="vendidos">
+        <h1>Nosso Diferencial</h1>
+      <div class="diferencial">
+        <div>
+          <img class="img-diferencial" src="../assets/imagens/diferencial.jpg" alt="Nosso Diferencial">
+        </div>
+
+        <div class="list-diferencial">
+
+          <p class="font-weight-medium">
+            <v-icon small color="pink lighten-1">mdi-check</v-icon>
+            Massas e recheios artesanais
+          </p>
+          <p class="font-weight-medium">
+            <v-icon small color="pink lighten-1">mdi-check</v-icon>
+            Padrão americano de produção
+          </p>
+          <p class="font-weight-medium">
+            <v-icon small color="pink lighten-1">mdi-check</v-icon>
+            Produção diária
+          </p>
+          <p class="font-weight-medium">
+            <v-icon small color="pink lighten-1">mdi-check</v-icon>
+            Sabores adaptados ao paladar brasileiro
+          </p>
+          <p class="font-weight-medium">
+            <v-icon small color="pink lighten-1">mdi-check</v-icon>
+            Sem conservantes
+          </p>
+        </div>
+      </div>
+  </div>
 </template>
 
-<style scoped>
-  .carousel-wrapper {
+<style>
+.carousel-wrapper {
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 40px;
+    height: 100vh;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: 50% 0;
+  }
+  .card-carousel {
+    width: 90%;
+    background: transparent!important;
+  }
+
+  .diferencial {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .card-carousel {
-    width: 80%;
+
+  .img-diferencial {
+    vertical-align:middle;
+    width: 395px;
+    height: 263px;
+    margin-right: 50px;
+    border-radius: 10%;
   }
 
+  .list-diferencial {
+    margin-left: 50px;
+  }
+
+  .list-diferencial p {
+    margin: 8px 0 0 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: white;
+  }
+
+  .v-carousel__controls {
+    background: var(--primary)!important;
+  }
+
+  .v-carousel__controls button {
+    color: white!important;
+  }
 </style>

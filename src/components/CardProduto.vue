@@ -28,7 +28,7 @@
 </script>
 
 <template>
-  <v-card class="mx-auto" width="344">
+  <v-card class="mx-auto card-shadow" width="344">
       <div class="product-image" v-bind:style="[{ 'background-image': `url('${productImage}')` }]"></div>
 
       <v-card-text>
@@ -42,8 +42,8 @@
       </v-card-text>
 
       <v-card-actions>
-        <v-btn text color="deep-purple accent-4">
-          Adicionar ao carrinho
+        <v-btn text color="deep-purple accent-4 ">
+          <span class="add-cart">Adicionar ao carrinho</span>
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -56,5 +56,18 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .card-shadow {
+    transition: box-shadow .3s;
+    box-shadow: 0 0 3px rgb(105, 104, 104);
+  }
+
+  .card-shadow:hover{
+    box-shadow: 0 0 20px rgb(0, 0, 0); 
+  }
+
+  .add-cart:hover {
+    color: green;
   }
 </style>

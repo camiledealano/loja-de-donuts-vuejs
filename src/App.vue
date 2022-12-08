@@ -1,6 +1,19 @@
 <script setup>
 </script>
 
+<script>
+  export default {
+      data: () => ({
+        icons: [
+          'mdi-facebook',
+          'mdi-whatsapp',
+          'mdi-linkedin',
+          'mdi-instagram',
+        ],
+      }),
+    }
+</script>
+
 <template>
     <v-app>
       <v-app-bar class="header-vuetify" color="#F03A9E">
@@ -16,49 +29,53 @@
           <router-link to="/">
             <v-btn>
               <v-icon small style="margin-right: 5px;">mdi-home</v-icon>
-              HOME
+              Home
             </v-btn>
           </router-link>
 
           <router-link to="/sobre">
             <v-btn>
               <v-icon small style="margin-right: 5px;">mdi-information</v-icon>
-              SOBRE
+              Sobre nós
             </v-btn>
           </router-link>
 
           <router-link to="/cardapio">
             <v-btn>
               <v-icon small style="margin-right: 5px;">mdi-file-document</v-icon>
-              CARDÁPIO
+              Cardápio
             </v-btn>
           </router-link>
 
           <a href="https://www.ifood.com.br/" target="_blank">
             <v-btn>
               <v-icon small style="margin-right: 5px;">mdi-food</v-icon>              
-              DELIVERY
+              Delivery
             </v-btn>
           </a>
         </div>
       </v-app-bar>
 
       <body>
-        <main>
+        <main class="fundo">
           <router-view></router-view>
         </main>
       </body>
 
-      <v-footer dark padless>
-          <v-card style="width: 100%; margin-top: 10px;" flat tile class="white--text text-center">
-            <v-card-text class="white--text pt-0">
-                With love by <strong>Camile de Alano</strong>
+      <v-footer dark padless color="#F03A9E">
+          <v-card style="width: 100%; margin-top: 10px;" flat tile class="white--text text-center" color="#F03A9E">
+            <v-card-text>
+              <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
+                <v-icon size="24px">
+                  {{ icon }}
+                </v-icon>
+              </v-btn>
             </v-card-text>
-
+            
             <v-divider></v-divider>
 
-            <v-card-text class="white--text">
-                {{ new Date().getFullYear() }} — © — <strong>All rights reserved</strong>
+            <v-card-text class="pt-0">
+              Feito com amor por <strong>Camile de Alano</strong>
             </v-card-text>
           </v-card>
       </v-footer>
@@ -92,6 +109,12 @@
 
   .header-right-flex i {
     color: white;
+  }
+
+  .fundo {
+    background-image: url(../src/assets/imagens/img.jpg);
+    background-size: cover;
+  
   }
 
 </style>
